@@ -1,5 +1,5 @@
 {
-  "name": "something-goes-here",
+  "name": "weather-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avik-ch/[].git"
+    "url": "git+https://github.com/avik-ch/weather-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/avik-ch/[]/issues"
+    "url": "https://github.com/avik-ch/weather-app/issues"
   },
-  "homepage": "https://github.com/avik-ch/[]#readme",
+  "homepage": "https://github.com/avik-ch/weather-app#readme",
   "devDependencies": {
     "css-loader": "^7.1.2",
     "html-loader": "^5.1.0",
