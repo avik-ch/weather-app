@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Weather</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- remove this later pls -->
+  </head>
+  <body class="flex">
+    <div class="header flex">
+      <div class="search-bar transparent-style">Search</div>
+      <div class="unit-switcher transparent-style flex">
+        °<span class="unit-selected">C</span>
+      </div>
+    </div>
+
+    <div class="headline-container transparent-style flex">
+      <div class="location">Minneapolis, MN, United States</div>
+      <div class="current-temp flex">
+        <div class="temp">30</div>
+        <div class="headline-unit">°<span class="unit-selected">C</span></div>
+      </div>
+      <div class="headline-info">min max feels like</div>
+    </div>
+
+    <div class="info-container transparent-style">stuff goes here</div>
+  </body>
 </html>
