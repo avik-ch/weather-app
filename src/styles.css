@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: white;
 }
 
 :root {
@@ -19,7 +20,7 @@ body {
 }
 
 .transparent-style {
-    background-color: #ffffffae;
+    background-color: #777474ae;
     backdrop-filter: blur(16px);
     box-shadow: 0 4px 12px #00000088;
 }
@@ -52,7 +53,8 @@ body {
     flex-direction: column;
     width: 400px;
     border-radius: 16px;
-    padding: 10px;
+    padding: 20px;
+    gap: 20px;
 }
 
 .current-temp {
@@ -70,5 +72,12 @@ body {
 .info-container {
     width: 400px;
     border-radius: 16px;
-    padding: 10px;
+    padding: 20px;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.info-row {
+    width: 100%;
+    justify-content: space-between;
 }

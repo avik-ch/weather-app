@@ -21,9 +21,41 @@
         <div class="temp">30</div>
         <div class="headline-unit">°<span class="unit-selected">C</span></div>
       </div>
-      <div class="headline-info">min max feels like</div>
+      <div class="description">Sunny or something idk</div>
     </div>
 
-    <div class="info-container transparent-style">stuff goes here</div>
+    <div class="info-container transparent-style flex">
+      <div class="info-row flex">
+        <div>Feels like</div>
+        <div>
+          <span id="feels-like">32.5</span>°<span class="unit-selected">C</span>
+        </div>
+      </div>
+
+      <div class="info-row flex">
+        <div>Maximum temperature</div>
+        <div><span id="temp-max">35</span>°<span class="unit-selected">C</span></div>
+      </div>
+
+      <div class="info-row flex">
+        <div>Minimum temperature</div>
+        <div><span id="temp-min">24</span>°<span class="unit-selected">C</span></div>
+      </div>
+
+      <div class="info-row flex">
+        <div>Humidity</div>
+        <div><span id="Humidity">59.9</span>%</div>
+      </div>
+
+      <div class="info-row flex">
+        <div>Precipitation</div>
+        <div><span id="Precipitation">0</span> mm</div>
+      </div>
+
+      <div class="info-row flex">
+        <div>Snow</div>
+        <div><span id="snow">0</span> cm</div>
+      </div>
+    </div>
   </body>
 </html>
