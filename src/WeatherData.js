@@ -1,4 +1,4 @@
-class WeatherData {
+export class WeatherData {
   #temp;
   #description;
   #location;
@@ -65,5 +65,27 @@ class WeatherData {
 
   get snow() {
     return this.#snow;
+  }
+
+  convertToCelsius() {
+    this.#temp = this.#fahrenheitToCelsius(this.#temp);
+    this.#feelsLike = this.#fahrenheitToCelsius(this.#feelsLike);
+    this.#maxTemp = this.#fahrenheitToCelsius(this.#maxTemp);
+    this.#minTemp = this.#fahrenheitToCelsius(this.#minTemp);
+  }
+
+  convertToFahrenheit() {
+    this.#temp = this.#celsiusToFahrenheit(this.#temp);
+    this.#feelsLike = this.#celsiusToFahrenheit(this.#feelsLike);
+    this.#maxTemp = this.#celsiusToFahrenheit(this.#maxTemp);
+    this.#minTemp = this.#celsiusToFahrenheit(this.#minTemp);
+  }
+
+  #fahrenheitToCelsius(f) {
+    return Math.round((5 / 9) * (f - 32) * 10) / 10;
+  }
+
+  #celsiusToFahrenheit(c) {
+    return Math.round((c * (9 / 5) + 32) * 10) / 10;
   }
 }
