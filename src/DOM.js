@@ -24,10 +24,13 @@ export const domElements = () => {
 
   const feelsLike = document.getElementById("feels-like");
   const tempMax = document.getElementById("temp-max");
-  const tempMin = document.getElementById("temp-Min");
+  const tempMin = document.getElementById("temp-min");
   const humidity = document.getElementById("humidity");
   const precip = document.getElementById("precip");
   const snow = document.getElementById("snow");
+
+  const searchfield = document.querySelector('.search-field');
+  searchField.addEventListener('focus', () => searchField.select());
 
   function updateDisplayData() {
     const weatherData = getWeatherData();
