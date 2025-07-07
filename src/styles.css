@@ -1,83 +1,98 @@
 * {
-    box-sizing: border-box;
-    color: white;
+  box-sizing: border-box;
+  color: white;
 }
 
 :root {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-    margin: 0px;
-    padding: 0px;
+html,
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    background-color: aqua;
-    min-height: 100vh;
-    gap: 20px;
-    flex-direction: column;
+  background-color: aqua;
+  min-height: 100vh;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .transparent-style {
-    background-color: #777474ae;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 4px 12px #00000088;
+  background-color: #777474ae;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 12px #00000088;
 }
 
 .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-    width: 400px;
-    height: 35px;
-    gap: 8px;
+  width: 400px;
+  height: 35px;
+  gap: 8px;
 }
 
 .search-bar {
-    flex-grow: 1;
-    padding: 10px;
-    border-radius: 30px;
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.search-field {
+  flex: 1;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  outline: none;
+}
+
+.search-field::placeholder {
+    color: #f6f6f6;
 }
 
 .unit-switcher {
-    height: 100%;
-    aspect-ratio: 1;
-    border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
 
 .headline-container {
-    flex-direction: column;
-    width: 400px;
-    border-radius: 16px;
-    padding: 20px;
-    gap: 20px;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 16px;
+  padding: 20px;
+  gap: 20px;
 }
 
 .current-temp {
-    align-items: start;
+  align-items: start;
 }
 
 .headline-unit {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .temp {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 .info-container {
-    width: 400px;
-    border-radius: 16px;
-    padding: 20px;
-    gap: 15px;
-    flex-direction: column;
+  width: 400px;
+  border-radius: 16px;
+  padding: 20px;
+  gap: 15px;
+  flex-direction: column;
 }
 
 .info-row {
-    width: 100%;
-    justify-content: space-between;
+  width: 100%;
+  justify-content: space-between;
 }

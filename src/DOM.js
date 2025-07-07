@@ -1,18 +1,33 @@
-import { getWeatherData, updateWeatherData, changeTempValues } from "./weatherFetch.js";
+import {
+  getWeatherData,
+  updateWeatherData,
+  changeTempValues,
+} from "./weatherFetch.js";
 
-export const domElements = (weatherData) => {
+export const domElements = () => {
   const tempUnits = [...document.querySelectorAll(".unit-selected")];
+
+  const searchField = document.querySelector(".search-field");
+
+  searchField.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      const query = searchField.value.trim();
+      if (query) {
+        updateWeatherData(query).then(updateDisplayData);
+      }
+    }
+  });
 
   const location = document.querySelector(".location");
   const mainTemp = document.querySelector(".temp");
   const description = document.querySelector(".description");
 
-  const feelsLike = document.querySelector("#feels-like");
-  const tempMax = document.querySelector("#temp-max");
-  const tempMin = document.querySelector("#temp-Min");
-  const humidity = document.querySelector("#humidity");
-  const precip = document.querySelector("#precip");
-  const snow = document.querySelector("#snow");
+  const feelsLike = document.getElementById("feels-like");
+  const tempMax = document.getElementById("temp-max");
+  const tempMin = document.getElementById("temp-Min");
+  const humidity = document.getElementById("humidity");
+  const precip = document.getElementById("precip");
+  const snow = document.getElementById("snow");
 
   function updateDisplayData() {
     const weatherData = getWeatherData();

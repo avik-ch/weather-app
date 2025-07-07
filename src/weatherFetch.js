@@ -8,6 +8,7 @@ export function getWeatherData() {
 async function fetchWeatherData(query) {
   const response = await fetch(query, { mode: "cors" });
   const weatherData = await response.json();
+  console.log(weatherData)
   return weatherData;
 }
 
@@ -19,15 +20,15 @@ export async function updateWeatherData(location) {
   const query = buildQuery(location);
   const data = await fetchWeatherData(query);
   weatherData = new WeatherData(
-    data.days[0].temp,
+    data.currentConditions.temp,
     data.days[0].description,
     data.resolvedAddress,
-    data.days[0].feelslike,
+    data.currentConditions.feelslike,
     data.days[0].tempmax,
     data.days[0].tempmin,
-    data.days[0].humidity,
-    data.days[0].precip,
-    data.days[0].snow
+    data.currentConditions.humidity,
+    data.currentConditions.precip,
+    data.currentConditions.snow
   );
   return weatherData;
 }
